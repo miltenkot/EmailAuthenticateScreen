@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1319086E29DDD85700A470C8 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319086D29DDD85700A470C8 /* AuthenticationViewModel.swift */; };
 		13B33B6129DCB38B00884F03 /* EmailAuthenticateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B33B6029DCB38B00884F03 /* EmailAuthenticateApp.swift */; };
 		13B33B6329DCB38B00884F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B33B6229DCB38B00884F03 /* ContentView.swift */; };
 		13B33B6529DCB38D00884F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B33B6429DCB38D00884F03 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1319086D29DDD85700A470C8 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		13B33B5D29DCB38B00884F03 /* EmailAuthenticate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailAuthenticate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B33B6029DCB38B00884F03 /* EmailAuthenticateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthenticateApp.swift; sourceTree = "<group>"; };
 		13B33B6229DCB38B00884F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				13B33B7129DCBEB700884F03 /* UserFormTextField.swift */,
 				13B33B7329DCC42F00884F03 /* RequirementsPickerView.swift */,
 				13B33B7529DCC48400884F03 /* CheckboxToggleStyle.swift */,
+				1319086D29DDD85700A470C8 /* AuthenticationViewModel.swift */,
 			);
 			path = PasswordScreen;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			files = (
 				13B33B6329DCB38B00884F03 /* ContentView.swift in Sources */,
 				13B33B6129DCB38B00884F03 /* EmailAuthenticateApp.swift in Sources */,
+				1319086E29DDD85700A470C8 /* AuthenticationViewModel.swift in Sources */,
 				13B33B7229DCBEB700884F03 /* UserFormTextField.swift in Sources */,
 				13B33B7429DCC42F00884F03 /* RequirementsPickerView.swift in Sources */,
 				13B33B7629DCC48400884F03 /* CheckboxToggleStyle.swift in Sources */,

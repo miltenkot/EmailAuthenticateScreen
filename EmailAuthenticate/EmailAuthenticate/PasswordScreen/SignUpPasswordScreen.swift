@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct SignUpPasswordScreen: View {
-    @State private var password = ""
-    @State private var confirmPassword = ""
-    @State private var toggleState = false
+    @StateObject private var authVM = AuthenticationViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
@@ -23,15 +21,15 @@ struct SignUpPasswordScreen: View {
                         .font(.caption)
                 }
                 Group {
-                    UserFormTextField(text: $password, type: .password)
+                    UserFormTextField(text: $authVM.password, type: .password)
                     VStack(alignment: .leading) {
-                        RequirementsPickerView(type: .eightChar, toggleState: $toggleState)
-                        RequirementsPickerView(type: .spacialChar, toggleState: $toggleState)
-                        RequirementsPickerView(type: .oneDigit, toggleState: $toggleState)
-                        RequirementsPickerView(type: .upperCaseChar, toggleState: $toggleState)
+                        RequirementsPickerView(type: .eightChar, toggleState: $authVM.hasEightChar)
+                        RequirementsPickerView(type: .spacialChar, toggleState: $authVM.hasSpacialChar)
+                        RequirementsPickerView(type: .oneDigit, toggleState: $authVM.hasOneDigit)
+                        RequirementsPickerView(type: .upperCaseChar, toggleState: $authVM.hasOneUpperCaseChar)
                     }
-                    UserFormTextField(text: $confirmPassword, type: .repeatPassword)
-                    RequirementsPickerView(type: .confirmation, toggleState: $toggleState)
+                    UserFormTextField(text: $authVM.confirmPassword, type: .repeatPassword)
+                    RequirementsPickerView(type: .confirmation, toggleState: $authVM.confirmationMatch)
                 }.padding(.vertical, 5)
                 Spacer()
                 Button {
