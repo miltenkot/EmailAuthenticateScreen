@@ -16,6 +16,7 @@
 		13B33B7229DCBEB700884F03 /* UserFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B33B7129DCBEB700884F03 /* UserFormTextField.swift */; };
 		13B33B7429DCC42F00884F03 /* RequirementsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B33B7329DCC42F00884F03 /* RequirementsPickerView.swift */; };
 		13B33B7629DCC48400884F03 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B33B7529DCC48400884F03 /* CheckboxToggleStyle.swift */; };
+		2ABC4DDF2B2F3BEC0055ECE0 /* KeyboardIgnoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC4DDE2B2F3BEC0055ECE0 /* KeyboardIgnoring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		13B33B7129DCBEB700884F03 /* UserFormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormTextField.swift; sourceTree = "<group>"; };
 		13B33B7329DCC42F00884F03 /* RequirementsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsPickerView.swift; sourceTree = "<group>"; };
 		13B33B7529DCC48400884F03 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		2ABC4DDE2B2F3BEC0055ECE0 /* KeyboardIgnoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardIgnoring.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				13B33B7329DCC42F00884F03 /* RequirementsPickerView.swift */,
 				13B33B7529DCC48400884F03 /* CheckboxToggleStyle.swift */,
 				1319086D29DDD85700A470C8 /* AuthenticationViewModel.swift */,
+				2ABC4DDE2B2F3BEC0055ECE0 /* KeyboardIgnoring.swift */,
 			);
 			path = PasswordScreen;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				13B33B7429DCC42F00884F03 /* RequirementsPickerView.swift in Sources */,
 				13B33B7629DCC48400884F03 /* CheckboxToggleStyle.swift in Sources */,
 				13B33B7029DCB94500884F03 /* SignUpPasswordScreen.swift in Sources */,
+				2ABC4DDF2B2F3BEC0055ECE0 /* KeyboardIgnoring.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
