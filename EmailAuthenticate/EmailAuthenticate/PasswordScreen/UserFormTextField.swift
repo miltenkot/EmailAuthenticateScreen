@@ -21,16 +21,32 @@ enum UserFormType {
 }
 
 struct UserFormTextField: View {
+    @FocusState private var focusedField: Field?
+    
+    enum Field {
+        case maskedPassword
+        case unmaskedPassword
+    }
     @Binding var text: String
     var type: UserFormType
-    @State private var isSecure = true
+    @State private var isSecure = true {
+        didSet {
+            if isSecure {
+                focusedField = .maskedPassword
+            } else {
+                focusedField = .unmaskedPassword
+            }
+        }
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
             if isSecure {
                 SecureField("\(type.title)", text: $text)
+                    .focused($focusedField, equals: .maskedPassword)
             } else {
                 TextField("\(type.title)", text: $text)
+                    .focused($focusedField, equals: .unmaskedPassword)
             }
         }
         .font(.body)
@@ -44,7 +60,6 @@ struct UserFormTextField: View {
             HStack {
                 Spacer()
                 Button("", systemImage: isSecure ? "eye.fill" : "eye.slash.fill") {
-                    
                     isSecure.toggle()
                 }
                 .padding(.trailing)

@@ -51,14 +51,16 @@ final class AuthenticationViewModel: ObservableObject {
             }
             .assign(to: &$hasOneUpperCaseChar)
         /// Check confirmation match password
-        Publishers.CombineLatest($password, $confirmPassword)
+        $password
+            .combineLatest($confirmPassword)
             .map { [weak self] _, _ in
                 guard let self else { return false}
                 return self.password == self.confirmPassword
             }
             .assign(to: &$confirmationMatch)
         /// Check all fields match
-        Publishers.CombineLatest($password, $confirmPassword)
+        $password
+            .combineLatest($confirmPassword)
             .map { [weak self] _, _ in
                 guard let self else { return false}
                 return self.hasEightChar && self.hasSpacialChar && self.hasOneDigit && self.hasOneUpperCaseChar && self.confirmationMatch
