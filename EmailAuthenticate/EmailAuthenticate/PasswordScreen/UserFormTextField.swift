@@ -23,18 +23,36 @@ enum UserFormType {
 struct UserFormTextField: View {
     @Binding var text: String
     var type: UserFormType
+    @State private var isSecure = true
     
     var body: some View {
         VStack(alignment: .leading) {
-            SecureField("\(type.title)", text: $text)
-                .font(.body)
+            if isSecure {
+                SecureField("\(type.title)", text: $text)
+            } else {
+                TextField("\(type.title)", text: $text)
+            }
         }
+        .font(.body)
         .padding()
         .frame(maxHeight: 60)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
                 .stroke(.gray, lineWidth: 2)
         )
+        .overlay {
+            HStack {
+                Spacer()
+                Button("", systemImage: isSecure ? "eye.fill" : "eye.slash.fill") {
+                    
+                    isSecure.toggle()
+                }
+                .padding(.trailing)
+                .tint(.gray)
+                .contentTransition(.symbolEffect(.replace))
+            }
+        }
+        
     }
 }
 
